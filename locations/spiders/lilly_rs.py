@@ -13,7 +13,6 @@ class LillyRSSpider(Spider):
     item_attributes = {"brand": "Lilly", "brand_wikidata": "Q111764460"}
     allowed_domains = ["www.lilly.rs"]
     start_urls = ["https://www.lilly.rs/locations/index/index?name="]
-    requires_proxy = True
 
     def parse(self, response: Response, **kwargs: Any) -> Any:
         for location in response.json():
